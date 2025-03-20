@@ -9,7 +9,11 @@ const routes: Routes = [
     component: BookingsComponent
   },
   {
-    path: 'createBooking',
+    path: 'create',
+    component: CreateBookingComponent
+  },
+  {
+    path: 'edit/:id',
     component: CreateBookingComponent
   },
   {
