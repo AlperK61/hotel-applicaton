@@ -1,0 +1,4 @@
+a {
+    color: inherit; /* Erbt die Farbe vom übergeordneten Element */
+    text-decoration: none; /* Entfernt die Unterstreichung */
+}

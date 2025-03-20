@@ -1,12 +1,21 @@
 
 <div class="list-group" *ngFor="let booking of bookings">
-    <a routerLink="/edit/{{booking.id}}" class="list-group-item list-group-item-action mb-2" aria-current="true">
-      <div class="d-flex w-100 justify-content-between">
+    <div  class="list-group-item list-group-item-action mb-2" aria-current="true">
+      <a routerLink="/edit/{{booking.id}}" class="d-flex w-100 justify-content-between">
         <h5 class="mb-1">{{booking.name}}</h5>
-        <small>{{booking.id}}</small>
+      </a>
+      <div class="d-flex w-100 justify-content-between">
+        <div>
+          <p class="mb-1">{{booking.startDate | date: 'dd/MM/yy'}} - {{booking.endDate | date: 'dd/MM/yy'}}</p>
+          <small>Room: {{booking.roomNumber}}</small>
+        </div>
+        <div class="d-flex justify-items-center ms-auto">
+          <button (click)="deleteBooking(booking)" class="btn btn-small btn-outline-danger">Delete</button>
+        </div>
       </div>
-      <p class="mb-1">{{booking.startDate | date: 'dd/MM/yy'}} - {{booking.endDate | date: 'dd/MM/yy'}}</p>
-      <small>Room: {{booking.roomNumber}}</small>
-    </a>
-    
+    </div>
+  </div>
+
+  <div class="alert alert-primary" role="alert">
+    A simple primary alert—check it out!
   </div>
